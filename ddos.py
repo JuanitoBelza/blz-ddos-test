@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 
-# PRECIO HOLANDA | 8983.88$ = 0,15BTC | network BT | wallet
-
 import sys
 import socket
 import time
